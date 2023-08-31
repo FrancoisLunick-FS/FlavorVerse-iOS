@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var emailAddress = ""
-    @State private var username = ""
-    @State private var password = ""
+//    @State private var emailAddress = ""
+//    @State private var username = ""
+//    @State private var password = ""
     @State private var showWelcome = false
     @State private var showLogin = false
     @EnvironmentObject var viewModel: RegistrationViewModel
@@ -41,7 +41,7 @@ struct SignUpView: View {
                     Image(systemName: "person.circle")
                         .resizable()
                         .frame(width: 24, height: 24)
-                    TextField("Username", text: $username)
+                    TextField("Username", text: $viewModel.username)
                 }
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
@@ -51,7 +51,7 @@ struct SignUpView: View {
                     Image(systemName: "person.circle")
                         .resizable()
                         .frame(width: 24, height: 24)
-                    TextField("Email", text: $emailAddress)
+                    TextField("Email", text: $viewModel.email)
                         
                         
                 }
@@ -63,7 +63,7 @@ struct SignUpView: View {
                     Image(systemName: "lock")
                         .resizable()
                         .frame(width: 24, height: 24)
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                 }
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
@@ -76,6 +76,11 @@ struct SignUpView: View {
                     .foregroundColor(.gray)
                 
                 Button {
+                    
+                    Task {
+                        try await viewModel.createUser()
+                    }
+                    
                     withAnimation {
                         showWelcome.toggle()
                     }
@@ -111,9 +116,12 @@ struct SignUpView: View {
                         LoginView()
                     }
                 }
-                
-               
-                    
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Image(systemName: "chevron.left")
+                        .imageScale(.large)
+                }
             }
         }
     }
