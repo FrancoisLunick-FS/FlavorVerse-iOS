@@ -12,7 +12,6 @@ struct LoginView: View {
     @State private var password = ""
     @State private var showWelcome = false
     @State private var showSignUp = false
-    @StateObject var registrationViewModel = RegistrationViewModel()
     
     var body: some View {
         ZStack {
@@ -35,7 +34,6 @@ struct LoginView: View {
                     }
                     .sheet(isPresented: $showSignUp) {
                         SignUpView()
-                            .environmentObject(registrationViewModel)
                     }
                     
                 }
