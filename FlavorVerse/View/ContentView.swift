@@ -19,10 +19,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ContentViewModel()
     
     var body: some View {
-        
-            MainView()
+        Group {
+            if viewModel.userSession == nil {
+                LoginView()
+            } else {
+                MainView()
+            }
+        }
+            
     }
 }
 
