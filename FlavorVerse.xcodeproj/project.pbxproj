@@ -14,6 +14,8 @@
 		4EEAA25C2AA10C7E0056222C /* FlavorVerseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA25B2AA10C7E0056222C /* FlavorVerseTests.swift */; };
 		4EEAA2662AA10C7E0056222C /* FlavorVerseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2652AA10C7E0056222C /* FlavorVerseUITests.swift */; };
 		4EEAA2682AA10C7E0056222C /* FlavorVerseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2672AA10C7E0056222C /* FlavorVerseUITestsLaunchTests.swift */; };
+		4EEAA2752AA10D1B0056222C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2742AA10D1B0056222C /* LoginView.swift */; };
+		4EEAA2772AA10D3A0056222C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2762AA10D3A0056222C /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		4EEAA2612AA10C7E0056222C /* FlavorVerseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlavorVerseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEAA2652AA10C7E0056222C /* FlavorVerseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorVerseUITests.swift; sourceTree = "<group>"; };
 		4EEAA2672AA10C7E0056222C /* FlavorVerseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorVerseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4EEAA2742AA10D1B0056222C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4EEAA2762AA10D3A0056222C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */,
 				4EEAA24C2AA10C7A0056222C /* ContentView.swift */,
+				4EEAA2742AA10D1B0056222C /* LoginView.swift */,
+				4EEAA2762AA10D3A0056222C /* SignUpView.swift */,
 				4EEAA24E2AA10C7E0056222C /* Assets.xcassets */,
 				4EEAA2502AA10C7E0056222C /* Preview Content */,
 			);
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEAA2772AA10D3A0056222C /* SignUpView.swift in Sources */,
+				4EEAA2752AA10D1B0056222C /* LoginView.swift in Sources */,
 				4EEAA24D2AA10C7A0056222C /* ContentView.swift in Sources */,
 				4EEAA24B2AA10C7A0056222C /* FlavorVerseApp.swift in Sources */,
 			);
