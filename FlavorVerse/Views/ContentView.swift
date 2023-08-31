@@ -79,19 +79,6 @@ struct ContentView: View {
                     
                 }
             }.zIndex(1)
-        
-//        VStack {
-//            Image("niagarafalls")
-//                .resizable()
-//                .cornerRadius(10)
-//                .aspectRatio(contentMode: .fit)
-//                .padding(.all)
-//
-//            Text("Niagara Falls")
-//        }
-        
-
-        
     }
 }
 
