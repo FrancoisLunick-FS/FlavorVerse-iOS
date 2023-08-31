@@ -22,6 +22,7 @@
 		4EEAA2832AA12E810056222C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2822AA12E810056222C /* MainView.swift */; };
 		4EEAA2852AA130300056222C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2842AA130300056222C /* ContentViewModel.swift */; };
 		4EEAA2882AA134450056222C /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2872AA134450056222C /* RegistrationViewModel.swift */; };
+		4EEAA28A2AA143390056222C /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2892AA143390056222C /* SignUpCompleteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4EEAA2822AA12E810056222C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4EEAA2842AA130300056222C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		4EEAA2872AA134450056222C /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		4EEAA2892AA143390056222C /* SignUpCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				4EEAA2742AA10D1B0056222C /* LoginView.swift */,
 				4EEAA2762AA10D3A0056222C /* SignUpView.swift */,
 				4EEAA2822AA12E810056222C /* MainView.swift */,
+				4EEAA2892AA143390056222C /* SignUpCompleteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				4EEAA2832AA12E810056222C /* MainView.swift in Sources */,
 				4EEAA2752AA10D1B0056222C /* LoginView.swift in Sources */,
 				4EEAA2852AA130300056222C /* ContentViewModel.swift in Sources */,
+				4EEAA28A2AA143390056222C /* SignUpCompleteView.swift in Sources */,
 				4EEAA27F2AA1267E0056222C /* AuthService.swift in Sources */,
 				4EEAA2882AA134450056222C /* RegistrationViewModel.swift in Sources */,
 				4EEAA24D2AA10C7A0056222C /* ContentView.swift in Sources */,
