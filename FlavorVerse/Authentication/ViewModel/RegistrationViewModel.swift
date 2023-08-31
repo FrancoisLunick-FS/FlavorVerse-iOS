@@ -8,7 +8,11 @@
 import Foundation
 
 class RegistrationViewModel: ObservableObject {
-    @Published private var email = ""
-    @Published private var password = ""
-    @Published private var username = ""
+    @Published var email = ""
+    @Published var password = ""
+    @Published var username = ""
+    
+    func createUser() async throws {
+        try await AuthService.shared.createUser(usingEmail: email, password: password, username: username)
+    }
 }
