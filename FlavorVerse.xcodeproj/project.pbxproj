@@ -98,10 +98,8 @@
 		4EEAA2492AA10C7A0056222C /* FlavorVerse */ = {
 			isa = PBXGroup;
 			children = (
+				4EEAA2782AA10E6C0056222C /* Views */,
 				4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */,
-				4EEAA24C2AA10C7A0056222C /* ContentView.swift */,
-				4EEAA2742AA10D1B0056222C /* LoginView.swift */,
-				4EEAA2762AA10D3A0056222C /* SignUpView.swift */,
 				4EEAA24E2AA10C7E0056222C /* Assets.xcassets */,
 				4EEAA2502AA10C7E0056222C /* Preview Content */,
 			);
@@ -131,6 +129,16 @@
 				4EEAA2672AA10C7E0056222C /* FlavorVerseUITestsLaunchTests.swift */,
 			);
 			path = FlavorVerseUITests;
+			sourceTree = "<group>";
+		};
+		4EEAA2782AA10E6C0056222C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EEAA24C2AA10C7A0056222C /* ContentView.swift */,
+				4EEAA2742AA10D1B0056222C /* LoginView.swift */,
+				4EEAA2762AA10D3A0056222C /* SignUpView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

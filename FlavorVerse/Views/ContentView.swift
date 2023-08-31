@@ -47,9 +47,6 @@ struct ContentView: View {
                             .presentationDetents([.height(400), .large, .large])
                             .presentationDragIndicator(.hidden)
                     }
-//                HalfASheet(isPresented: $showLogin) {
-//                    LoginView()
-//                }
                     
                     Button {
                         withAnimation {
