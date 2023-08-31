@@ -16,6 +16,7 @@
 		4EEAA2682AA10C7E0056222C /* FlavorVerseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2672AA10C7E0056222C /* FlavorVerseUITestsLaunchTests.swift */; };
 		4EEAA2752AA10D1B0056222C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2742AA10D1B0056222C /* LoginView.swift */; };
 		4EEAA2772AA10D3A0056222C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2762AA10D3A0056222C /* SignUpView.swift */; };
+		4EEAA27B2AA121BB0056222C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4EEAA27A2AA121BB0056222C /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEAA27B2AA121BB0056222C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +100,7 @@
 		4EEAA2492AA10C7A0056222C /* FlavorVerse */ = {
 			isa = PBXGroup;
 			children = (
+				4EEAA27C2AA124320056222C /* Authentication */,
 				4EEAA2782AA10E6C0056222C /* Views */,
 				4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */,
 				4EEAA24E2AA10C7E0056222C /* Assets.xcassets */,
@@ -141,6 +144,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4EEAA27C2AA124320056222C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4EEAA27D2AA124600056222C /* Service */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		4EEAA27D2AA124600056222C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +175,9 @@
 			dependencies = (
 			);
 			name = FlavorVerse;
+			packageProductDependencies = (
+				4EEAA27A2AA121BB0056222C /* FirebaseAuth */,
+			);
 			productName = FlavorVerse;
 			productReference = 4EEAA2472AA10C7A0056222C /* FlavorVerse.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +250,9 @@
 				Base,
 			);
 			mainGroup = 4EEAA23E2AA10C7A0056222C;
+			packageReferences = (
+				4EEAA2792AA121BA0056222C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4EEAA2482AA10C7A0056222C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -599,6 +623,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4EEAA2792AA121BA0056222C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4EEAA27A2AA121BB0056222C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EEAA2792AA121BA0056222C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4EEAA23F2AA10C7A0056222C /* Project object */;
 }
