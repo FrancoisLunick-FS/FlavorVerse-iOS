@@ -10,10 +10,12 @@ import SwiftUI
 struct SignUpCompleteView: View {
     @State private var showHome = false
     
+    @EnvironmentObject var viewModel: RegistrationViewModel
+    
     var body: some View {
         
         VStack {
-            Text("Welcome to FlavorVerse")
+            Text("Welcome to FlavorVerse, \(viewModel.username)")
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
                 .bold()
