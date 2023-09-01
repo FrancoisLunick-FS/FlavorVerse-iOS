@@ -95,8 +95,7 @@ struct SignUpView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(.red)
                 .sheet(isPresented: $showWelcome) {
-                    LoginView()
-                        .presentationDetents([.height(400), .large, .large])
+                    SignUpCompleteView()
                 }
                 
                 HStack {
