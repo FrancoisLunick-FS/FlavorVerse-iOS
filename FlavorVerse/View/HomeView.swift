@@ -9,7 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("")
+        NavigationView {
+            ScrollView {
+                RecipeList(recipes: RecipeModel.recipes)
+            }
+        }
+        
     }
 }
 
