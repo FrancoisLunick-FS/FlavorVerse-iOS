@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1292FA2AA7A40C007CD16E /* MenuBarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1292F92AA7A40C007CD16E /* MenuBarOptionsView.swift */; };
 		4EEAA24B2AA10C7A0056222C /* FlavorVerseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */; };
 		4EEAA24D2AA10C7A0056222C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA24C2AA10C7A0056222C /* ContentView.swift */; };
 		4EEAA24F2AA10C7E0056222C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEAA24E2AA10C7E0056222C /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E1292F92AA7A40C007CD16E /* MenuBarOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarOptionsView.swift; sourceTree = "<group>"; };
 		4EEAA2472AA10C7A0056222C /* FlavorVerse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlavorVerse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorVerseApp.swift; sourceTree = "<group>"; };
 		4EEAA24C2AA10C7A0056222C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				4EEAA2892AA143390056222C /* SignUpCompleteView.swift */,
 				4EEAA28D2AA159890056222C /* RecipeCardView.swift */,
 				4EEAA2912AA6B5DF0056222C /* RecipeList.swift */,
+				4E1292F92AA7A40C007CD16E /* MenuBarOptionsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				4EEAA2772AA10D3A0056222C /* SignUpView.swift in Sources */,
 				4EEAA28E2AA159890056222C /* RecipeCardView.swift in Sources */,
+				4E1292FA2AA7A40C007CD16E /* MenuBarOptionsView.swift in Sources */,
 				4EEAA2832AA12E810056222C /* MainView.swift in Sources */,
 				4EEAA2752AA10D1B0056222C /* LoginView.swift in Sources */,
 				4EEAA28C2AA14B360056222C /* HomeView.swift in Sources */,
