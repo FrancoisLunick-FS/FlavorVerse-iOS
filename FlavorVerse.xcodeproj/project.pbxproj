@@ -26,6 +26,7 @@
 		4EEAA28C2AA14B360056222C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA28B2AA14B360056222C /* HomeView.swift */; };
 		4EEAA28E2AA159890056222C /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA28D2AA159890056222C /* RecipeCardView.swift */; };
 		4EEAA2902AA179E50056222C /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA28F2AA179E50056222C /* RecipeModel.swift */; };
+		4EEAA2922AA6B5DF0056222C /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2912AA6B5DF0056222C /* RecipeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4EEAA28B2AA14B360056222C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4EEAA28D2AA159890056222C /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		4EEAA28F2AA179E50056222C /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		4EEAA2912AA6B5DF0056222C /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				4EEAA28B2AA14B360056222C /* HomeView.swift */,
 				4EEAA2892AA143390056222C /* SignUpCompleteView.swift */,
 				4EEAA28D2AA159890056222C /* RecipeCardView.swift */,
+				4EEAA2912AA6B5DF0056222C /* RecipeList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				4EEAA2752AA10D1B0056222C /* LoginView.swift in Sources */,
 				4EEAA28C2AA14B360056222C /* HomeView.swift in Sources */,
 				4EEAA2902AA179E50056222C /* RecipeModel.swift in Sources */,
+				4EEAA2922AA6B5DF0056222C /* RecipeList.swift in Sources */,
 				4EEAA2852AA130300056222C /* ContentViewModel.swift in Sources */,
 				4EEAA28A2AA143390056222C /* SignUpCompleteView.swift in Sources */,
 				4EEAA27F2AA1267E0056222C /* AuthService.swift in Sources */,
