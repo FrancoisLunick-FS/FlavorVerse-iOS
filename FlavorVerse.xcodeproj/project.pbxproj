@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E1292FA2AA7A40C007CD16E /* MenuBarOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1292F92AA7A40C007CD16E /* MenuBarOptionsView.swift */; };
+		4E1292FE2AB54317007CD16E /* MealSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1292FD2AB54317007CD16E /* MealSection.swift */; };
 		4EEAA24B2AA10C7A0056222C /* FlavorVerseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */; };
 		4EEAA24D2AA10C7A0056222C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA24C2AA10C7A0056222C /* ContentView.swift */; };
 		4EEAA24F2AA10C7E0056222C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEAA24E2AA10C7E0056222C /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		4E1292F92AA7A40C007CD16E /* MenuBarOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarOptionsView.swift; sourceTree = "<group>"; };
+		4E1292FD2AB54317007CD16E /* MealSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSection.swift; sourceTree = "<group>"; };
 		4EEAA2472AA10C7A0056222C /* FlavorVerse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlavorVerse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorVerseApp.swift; sourceTree = "<group>"; };
 		4EEAA24C2AA10C7A0056222C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,10 +128,10 @@
 				4EEAA2782AA10E6C0056222C /* View */,
 				4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */,
 				4EEAA2842AA130300056222C /* ContentViewModel.swift */,
+				4EEAA28F2AA179E50056222C /* RecipeModel.swift */,
 				4EEAA24E2AA10C7E0056222C /* Assets.xcassets */,
 				4EEAA2802AA12DE10056222C /* GoogleService-Info.plist */,
 				4EEAA2502AA10C7E0056222C /* Preview Content */,
-				4EEAA28F2AA179E50056222C /* RecipeModel.swift */,
 			);
 			path = FlavorVerse;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 				4EEAA28D2AA159890056222C /* RecipeCardView.swift */,
 				4EEAA2912AA6B5DF0056222C /* RecipeList.swift */,
 				4E1292F92AA7A40C007CD16E /* MenuBarOptionsView.swift */,
+				4E1292FD2AB54317007CD16E /* MealSection.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				4EEAA2922AA6B5DF0056222C /* RecipeList.swift in Sources */,
 				4EEAA2852AA130300056222C /* ContentViewModel.swift in Sources */,
 				4EEAA28A2AA143390056222C /* SignUpCompleteView.swift in Sources */,
+				4E1292FE2AB54317007CD16E /* MealSection.swift in Sources */,
 				4EEAA27F2AA1267E0056222C /* AuthService.swift in Sources */,
 				4EEAA2882AA134450056222C /* RegistrationViewModel.swift in Sources */,
 				4EEAA24D2AA10C7A0056222C /* ContentView.swift in Sources */,
