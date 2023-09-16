@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MenuBarOptionsView: View {
     @Binding var selectedOption: Category
+    @Namespace var animation
     
     var body: some View {
         
@@ -24,6 +25,7 @@ struct MenuBarOptionsView: View {
                             if selectedOption == item {
                                 Capsule()
                                     .fill(.black)
+                                    .matchedGeometryEffect(id: "item", in: animation)
                                     .frame(height: 3)
                                     .padding(.horizontal, -10)
                             } else {
@@ -34,8 +36,10 @@ struct MenuBarOptionsView: View {
                             }
                         }
                             .onTapGesture {
-                                self.selectedOption = item
-                                proxy.scrollTo(item, anchor: .topTrailing)
+                                withAnimation {
+                                    self.selectedOption = item
+                                    proxy.scrollTo(item, anchor: .topTrailing)
+                                }
                             }
                     }
                 }
