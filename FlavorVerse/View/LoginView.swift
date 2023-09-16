@@ -32,7 +32,7 @@ struct LoginView: View {
                         Text("Sign Up")
                             .foregroundColor(.black)
                     }
-                    .sheet(isPresented: $showSignUp) {
+                    .fullScreenCover(isPresented: $showSignUp) {
                         SignUpView()
                     }
                     
@@ -89,7 +89,6 @@ struct LoginView: View {
                 }
                 
             }
-            //Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }
     }
 }
