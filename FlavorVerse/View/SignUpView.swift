@@ -94,7 +94,7 @@ struct SignUpView: View {
                 .padding(.all)
                 .buttonStyle(.borderedProminent)
                 .tint(.red)
-                .sheet(isPresented: $showWelcome) {
+                .fullScreenCover(isPresented: $showWelcome) {
                     SignUpCompleteView()
                 }
                 
@@ -111,6 +111,7 @@ struct SignUpView: View {
                         Text("Login")
                             .foregroundColor(.red)
                     }
+                    
                     .sheet(isPresented: $showLogin) {
                         LoginView()
                     }
