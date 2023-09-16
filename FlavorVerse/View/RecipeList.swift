@@ -36,7 +36,7 @@ struct RecipeList: View {
 struct RecipeList_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            RecipeList(recipes: RecipeModel.recipes, category: .dinner)
+            RecipeList(recipes: [RecipeModel(name: "", image: "", description: "", ingredients: "", directions: "", category: "", datePublished: "", url: "")], category: .breakfast)
         }
         
     }
