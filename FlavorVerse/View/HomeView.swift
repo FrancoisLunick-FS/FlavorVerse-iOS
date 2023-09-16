@@ -36,8 +36,12 @@ struct HomeView: View {
             MenuBarOptionsView(selectedOption: $selectedOption)
                 .padding([.top, .horizontal])
             NavigationView {
-                ScrollView {
-                    RecipeList(recipes: RecipeModel.recipes)
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(Category.allCases, id: \.self) { categoryItem in
+                        
+                        MealSection(options: categoryItem)
+                    }
+                    //ForEach(Men)
                 }
             }
                 
