@@ -27,13 +27,23 @@ struct MealSection: View {
                     }
                     
                     Spacer()
-                    
-                    Image(mealItem.image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 96, height: 88)
-                        .clipped()
-                        .cornerRadius(10)
+                        
+                    AsyncImage(url: URL(string: mealItem.image)) { image in
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 96, height: 88)
+                            .clipped()
+                            .cornerRadius(10)
+                    } placeholder: {
+                        Image(systemName: "photo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40, alignment: .center)
+                            .foregroundColor(.white.opacity(0.7))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            
+                    }
                 }
                 .padding(.horizontal)
                 

@@ -36,12 +36,23 @@ struct HomeView: View {
             MenuBarOptionsView(selectedOption: $selectedOption)
                 .padding([.top, .horizontal])
             NavigationView {
-                ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(Category.allCases, id: \.self) { categoryItem in
+                ScrollViewReader { proxy in
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            ForEach(Category.allCases, id: \.self) { categoryItem in
+                                
+                                MealSection(options: categoryItem)
+                            }
+                        }
+                        .onChange(of: selectedOption, perform: { _ in
+                            withAnimation {
+                                proxy.scrollTo(selectedOption, anchor: .topTrailing)
+                            }
+                        })
+                        .padding(.horizontal)
                         
-                        MealSection(options: categoryItem)
+                        //ForEach(Men)
                     }
-                    //ForEach(Men)
                 }
             }
                 

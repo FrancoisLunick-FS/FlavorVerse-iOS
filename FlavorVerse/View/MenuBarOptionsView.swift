@@ -12,29 +12,32 @@ struct MenuBarOptionsView: View {
     
     var body: some View {
         
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 30) {
-                
-                    ForEach(Category.allCases, id: \.self) { item in
-                        VStack {
-                        Text(item.rawValue)
-                            .foregroundColor(item == selectedOption ? .black : .gray)
-                        
-                        if selectedOption == item {
-                            Capsule()
-                                .fill(.black)
-                                .frame(height: 3)
-                                .padding(.horizontal, -10)
-                        } else {
-                            Capsule()
-                                .fill(.clear)
-                                .frame(height: 3)
-                                .padding(.horizontal, -10)
+        ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 30) {
+                    
+                        ForEach(Category.allCases, id: \.self) { item in
+                            VStack {
+                            Text(item.rawValue)
+                                .foregroundColor(item == selectedOption ? .black : .gray)
+                            
+                            if selectedOption == item {
+                                Capsule()
+                                    .fill(.black)
+                                    .frame(height: 3)
+                                    .padding(.horizontal, -10)
+                            } else {
+                                Capsule()
+                                    .fill(.clear)
+                                    .frame(height: 3)
+                                    .padding(.horizontal, -10)
+                            }
                         }
+                            .onTapGesture {
+                                self.selectedOption = item
+                                proxy.scrollTo(item, anchor: .topTrailing)
+                            }
                     }
-                        .onTapGesture {
-                            self.selectedOption = item
-                        }
                 }
             }
         }
