@@ -41,7 +41,7 @@ struct SignUpCompleteView: View {
             .padding(.all)
             .buttonStyle(.borderedProminent)
             .tint(.red)
-            .sheet(isPresented: $showHome) {
+            .fullScreenCover(isPresented: $showHome) {
                 HomeView()
                     .presentationDetents([.height(400), .large, .large])
             }
