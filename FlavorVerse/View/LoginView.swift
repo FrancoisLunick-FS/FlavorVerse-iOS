@@ -10,6 +10,8 @@
 //  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
 //  Please retain this header in all copies of the code.
 //
+//  Git Repository: https://github.com/FrancoisLunick-FS/FlavorVerse-iOS
+//
 //  Note: This view is part of the FlavorVerse app, which is designed for recipe exploration and cooking.
 //
 

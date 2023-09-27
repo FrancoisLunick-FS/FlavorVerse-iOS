@@ -10,6 +10,7 @@
 //  The app provides an interactive cooking experience, step-by-step instructions, and a range of recipes
 //  to cater to diverse tastes and preferences.
 //
+//  Git Repository: https://github.com/FrancoisLunick-FS/FlavorVerse-iOS
 //
 //  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
 //  Please retain this header in all copies of the code.
