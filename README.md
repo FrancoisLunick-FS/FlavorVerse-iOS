@@ -13,5 +13,3 @@ FlavorVerse is a mobile application that provides a delightful cooking experienc
 - **Search Functionality:** Easily find recipes by searching for keywords, ingredients, or specific dishes.
 
 - **User-Friendly Interface:** Enjoy a user-friendly and visually appealing interface for a seamless cooking experience.
-
-# 
