@@ -43,10 +43,10 @@ struct MainView: View {
                 
                 // Login button
                 Button {
-                        withAnimation {
-                            showLogin.toggle()
-                        }
-
+                    withAnimation {
+                        showLogin.toggle()
+                    }
+                    
                 } label: {
                     Text("Login")
                         .foregroundColor(.white)

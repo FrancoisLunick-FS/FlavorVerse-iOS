@@ -18,9 +18,9 @@ import SwiftUI
 struct SignUpView: View {
     
     // MARK: - Properties
-//    @State private var emailAddress = ""
-//    @State private var username = ""
-//    @State private var password = ""
+    //    @State private var emailAddress = ""
+    //    @State private var username = ""
+    //    @State private var password = ""
     @State private var showWelcome = false
     @State private var showLogin = false
     @EnvironmentObject var viewModel: RegistrationViewModel
@@ -65,8 +65,8 @@ struct SignUpView: View {
                         .resizable()
                         .frame(width: 24, height: 24)
                     TextField("Email", text: $viewModel.email)
-                        
-                        
+                    
+                    
                 }
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))

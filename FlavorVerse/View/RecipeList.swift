@@ -46,7 +46,7 @@ struct RecipeList: View {
                     RecipeCardView(recipeModel: recipe)
                 }
             } .padding(.top)
-                
+            
             
         } .padding(.horizontal)
     }

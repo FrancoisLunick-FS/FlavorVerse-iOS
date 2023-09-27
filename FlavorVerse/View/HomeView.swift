@@ -23,7 +23,7 @@ struct HomeView: View {
     @State private var selectedOption: Category = .breakfast
     @State private var currentCategory: Category = .breakfast
     
-//    @EnvironmentObject var viewModel: RegistrationViewModel
+    //    @EnvironmentObject var viewModel: RegistrationViewModel
     
     // MARK: - Body
     var body: some View {
@@ -45,7 +45,7 @@ struct HomeView: View {
                     Image(systemName: "magnifyingglass")
                         .font(.title2)
                 }
-
+                
             }
             // Menu Options list
             MenuBarOptionsView(selectedOption: $selectedOption, currentOption: $currentCategory)
@@ -72,7 +72,7 @@ struct HomeView: View {
                     .coordinateSpace(name: "scroll")
                 }
             }
-                
+            
         }
         
     }
