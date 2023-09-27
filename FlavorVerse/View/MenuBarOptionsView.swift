@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MenuBarOptionsView: View {
     @Binding var selectedOption: Category
+    @Binding var currentOption: Category
     @Namespace var animation
     
     var body: some View {
@@ -20,9 +21,9 @@ struct MenuBarOptionsView: View {
                         ForEach(Category.allCases, id: \.self) { item in
                             VStack {
                             Text(item.rawValue)
-                                .foregroundColor(item == selectedOption ? .black : .gray)
+                                .foregroundColor(item == currentOption ? .black : .gray)
                             
-                            if selectedOption == item {
+                            if currentOption == item {
                                 Capsule()
                                     .fill(.black)
                                     .matchedGeometryEffect(id: "item", in: animation)
@@ -42,14 +43,17 @@ struct MenuBarOptionsView: View {
                                 }
                             }
                     }
+                        .onChange(of: currentOption) { _ in
+                            proxy.scrollTo(currentOption, anchor: .topTrailing)
+                        }
                 }
             }
         }
     }
 }
 
-struct MenuBarOptionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuBarOptionsView(selectedOption: .constant(.breakfast))
-    }
-}
+//struct MenuBarOptionsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MenuBarOptionsView(selectedOption: .constant(.breakfast))
+//    }
+//}
