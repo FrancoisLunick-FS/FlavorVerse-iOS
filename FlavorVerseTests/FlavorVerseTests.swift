@@ -4,6 +4,15 @@
 //
 //  Created by Lunick Francois on 8/31/23.
 //
+//  Description: This file contains unit tests for the FlavorVerse application. It includes test cases for
+//  verifying the functionality and correctness of various components and features in the app. XCTest is used
+//  as the testing framework.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: These tests are essential for maintaining the quality and reliability of the FlavorVerse app.
+//
 
 import XCTest
 @testable import FlavorVerse

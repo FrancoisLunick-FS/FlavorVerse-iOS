@@ -4,6 +4,16 @@
 //
 //  Created by Lunick Francois on 9/5/23.
 //
+//  Description: This file contains the menu bar options view for the FlavorVerse app.
+//  The menu bar options view displays a horizontal menu bar with different recipe categories,
+//  allowing the user to select a category to explore.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: This view is part of the FlavorVerse app, which is designed for recipe exploration and cooking.
+//
+
 
 import SwiftUI
 

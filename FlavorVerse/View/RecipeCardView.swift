@@ -4,6 +4,15 @@
 //
 //  Created by Lunick Francois on 8/31/23.
 //
+//  Description: This file contains the recipe card view for the FlavorVerse app.
+//  The recipe card view displays a recipe's image, name, and other details in a card-like format.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: This view is part of the FlavorVerse app, which is designed for recipe exploration and cooking.
+//
+
 
 import SwiftUI
 

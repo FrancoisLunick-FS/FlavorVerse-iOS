@@ -4,6 +4,16 @@
 //
 //  Created by Lunick Francois on 8/31/23.
 //
+//  Description: This file contains the data model for recipes in the FlavorVerse app.
+//  It defines the structure of a recipe, including its name, image, description, ingredients, directions,
+//  category, publication date, and URL.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: The FlavorVerse app is designed for recipe exploration and cooking.
+//
+
 
 import Foundation
 

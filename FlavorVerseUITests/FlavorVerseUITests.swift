@@ -4,6 +4,16 @@
 //
 //  Created by Lunick Francois on 8/31/23.
 //
+//  Description: This file contains UI tests for the FlavorVerse application. It includes test cases for
+//  verifying the user interface and interactions of various screens and features in the app. XCTest and
+//  XCTestUI are used as the testing frameworks.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: These tests are essential for ensuring the correct functionality and usability of the FlavorVerse app's UI.
+//
+
 
 import XCTest
 

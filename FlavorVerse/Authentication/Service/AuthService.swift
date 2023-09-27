@@ -4,6 +4,16 @@
 //
 //  Created by Lunick Francois on 8/31/23.
 //
+//  Description: This file contains the AuthService class responsible for handling user authentication
+//  and managing user sessions in the FlavorVerse app. It provides functions for user login, account creation,
+//  and signing out.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: AuthService is a critical component of user authentication in the FlavorVerse app.
+//
+
 
 import Foundation
 import FirebaseAuth

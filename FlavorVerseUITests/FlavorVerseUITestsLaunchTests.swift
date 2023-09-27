@@ -4,6 +4,17 @@
 //
 //  Created by Lunick Francois on 8/31/23.
 //
+//  Description: This file contains UI tests for launching the FlavorVerse application. It includes a test case for
+//  verifying that the app can be successfully launched and captures a screenshot of the launch screen.
+//  XCTest and XCTestUI are used as the testing frameworks.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: These tests are essential for ensuring that the FlavorVerse app can be launched and its initial
+//  state is captured for reference.
+//
+
 
 import XCTest
 

@@ -4,6 +4,14 @@
 //
 //  Created by Lunick Francois on 8/31/23.
 //
+//  Description: This file contains the sign-up view for the FlavorVerse app.
+//  The sign-up view allows users to create a new account by providing a username, email address, and password.
+//
+//  You are welcome to use, modify, and distribute this code under the terms of the MIT license.
+//  Please retain this header in all copies of the code.
+//
+//  Note: This view is part of the FlavorVerse app, which is designed for recipe exploration and cooking.
+//
 
 import SwiftUI
 
