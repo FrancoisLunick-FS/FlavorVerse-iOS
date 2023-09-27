@@ -14,8 +14,6 @@ FlavorVerse is a mobile application that provides a delightful cooking experienc
 
 - **User-Friendly Interface:** Enjoy a user-friendly and visually appealing interface for a seamless cooking experience.
 
-## Screenshots
-
-<img title="" src="file:///Users/lunickfrancois/Desktop/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202023-09-27%20at%2016.09.22.png" alt="Simulator Screenshot - iPhone 14 Pro - 2023-09-27 at 16.09.22.png" width="263">
+# 
 
 
