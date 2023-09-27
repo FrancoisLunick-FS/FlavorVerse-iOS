@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var selectedOption: Category = .breakfast
+    @State private var currentCategory: Category = .breakfast
     
 //    @EnvironmentObject var viewModel: RegistrationViewModel
     
@@ -33,7 +34,7 @@ struct HomeView: View {
 
             }
             // Menu Options list
-            MenuBarOptionsView(selectedOption: $selectedOption)
+            MenuBarOptionsView(selectedOption: $selectedOption, currentOption: $currentCategory)
                 .padding([.top, .horizontal])
             NavigationView {
                 ScrollViewReader { proxy in
@@ -41,7 +42,7 @@ struct HomeView: View {
                         VStack {
                             ForEach(Category.allCases, id: \.self) { categoryItem in
                                 
-                                MealSection(options: categoryItem)
+                                MealSection(category: categoryItem, currentCategory: $currentCategory)
                             }
                         }
                         .onChange(of: selectedOption, perform: { _ in
@@ -53,6 +54,7 @@ struct HomeView: View {
                         
                         //ForEach(Men)
                     }
+                    .coordinateSpace(name: "scroll")
                 }
             }
                 
