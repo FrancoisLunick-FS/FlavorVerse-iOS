@@ -16,17 +16,24 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    // MARK: - Properties
+    
+    // State variables to control sheet presentation
     @State private var showLogin = false
     @State private var showSignUp = false
     @State private var amount = 0.5
     
+    // MARK: - Body
     var body: some View {
         ZStack {
+            // Background image
             Image("loginbackground")
                 .resizable()
                 .ignoresSafeArea()
             
             VStack {
+                // Welcome title
                 Text("Welcome!")
                     .font(.title)
                     .foregroundColor(.white)
@@ -34,6 +41,7 @@ struct MainView: View {
                 
                 Spacer()
                 
+                // Login button
                 Button {
                         withAnimation {
                             showLogin.toggle()
@@ -54,6 +62,7 @@ struct MainView: View {
                         .presentationDragIndicator(.hidden)
                 }
                 
+                // Sign Up button
                 Button {
                     withAnimation {
                         showSignUp.toggle()

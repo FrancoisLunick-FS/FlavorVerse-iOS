@@ -16,6 +16,8 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
+    // MARK: - Properties
 //    @State private var emailAddress = ""
 //    @State private var username = ""
 //    @State private var password = ""
@@ -23,6 +25,7 @@ struct SignUpView: View {
     @State private var showLogin = false
     @EnvironmentObject var viewModel: RegistrationViewModel
     
+    // MARK: - Body
     var body: some View {
         
         ZStack {
@@ -45,6 +48,7 @@ struct SignUpView: View {
                 .padding(.leading)
                 Spacer()
                 
+                // Username Textfield
                 HStack {
                     Image(systemName: "person.circle")
                         .resizable()
@@ -55,6 +59,7 @@ struct SignUpView: View {
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                 .padding(.horizontal)
                 
+                // Email Textfield
                 HStack {
                     Image(systemName: "person.circle")
                         .resizable()
@@ -67,6 +72,7 @@ struct SignUpView: View {
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                 .padding(.horizontal)
                 
+                // Password SecureField
                 HStack {
                     Image(systemName: "lock")
                         .resizable()
@@ -79,10 +85,12 @@ struct SignUpView: View {
                 
                 Spacer()
                 
+                // Terms and Conditions Text
                 Text("By continuing you agree to our Terms and Conditions and Privacy")
                     .multilineTextAlignment(.center)
                     .foregroundColor(.gray)
                 
+                // Create Account Button
                 Button {
                     
                     Task {
@@ -106,6 +114,7 @@ struct SignUpView: View {
                     SignUpCompleteView()
                 }
                 
+                // Already have an account? Text and Login Button
                 HStack {
                     Text("Already have an account?")
                         .foregroundColor(.red)

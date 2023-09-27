@@ -30,6 +30,7 @@ class ContentViewModel: ObservableObject {
         
     }
     
+    /// Sets up the user session monitoring.
     func setup() {
         service.$userSession.sink { [weak self] userSession in
             self?.userSession = userSession

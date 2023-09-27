@@ -20,13 +20,18 @@ import FirebaseAuth
 
 class AuthService {
     
+    // MARK: - Properties
+    
     @Published var userSession: FirebaseAuth.User?
     
     static let shared = AuthService()
     
+    // MARK: - Initialization
     init() {
         self.userSession = Auth.auth().currentUser
     }
+    
+    // MARK: - User Authentication
     
     /// Handles user login.
     /// - Parameters:

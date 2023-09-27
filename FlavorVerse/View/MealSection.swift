@@ -17,14 +17,23 @@
 import SwiftUI
 
 struct MealSection: View {
+    
+    // MARK: - Properties
+    
+    // The category for this meal section
     let category: Category
+    
+    // Binding to the current category
     @Binding var currentCategory: Category
+    
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             Text(category.rawValue)
                 .font(.title.bold())
                 .padding(.vertical)
             
+            // Iterate through each meal item in the category
             ForEach(category.categories) { mealItem in
                 HStack(spacing: 16) {
                     VStack(alignment: .leading, spacing: 8) {
@@ -37,7 +46,8 @@ struct MealSection: View {
                     }
                     
                     Spacer()
-                        
+                    
+                    // Display the meal item's image asynchronously
                     AsyncImage(url: URL(string: mealItem.image)) { image in
                         image
                             .resizable()
@@ -52,7 +62,7 @@ struct MealSection: View {
                             .frame(width: 40, height: 40, alignment: .center)
                             .foregroundColor(.white.opacity(0.7))
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            
+                        
                     }
                 }
                 .padding(.horizontal)
@@ -64,9 +74,3 @@ struct MealSection: View {
         .modifier(OffsetModifier(category: category, currentCategory: $currentCategory))
     }
 }
-
-//struct MealSection_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MealSection(category: .breakfast)
-//    }
-//}

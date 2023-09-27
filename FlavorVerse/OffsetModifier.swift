@@ -19,10 +19,15 @@
 import Foundation
 import SwiftUI
 
+/// OffsetModifier is a SwiftUI view modifier that tracks view offsets and applies animations.
 struct OffsetModifier: ViewModifier {
     let category: Category
     @Binding var currentCategory: Category
     
+    
+    /// Modifies the content view with offset tracking and animation.
+    /// - Parameter content: The content view to be modified.
+    /// - Returns: A modified view.
     func body(content: Content) -> some View {
         content
             .overlay(

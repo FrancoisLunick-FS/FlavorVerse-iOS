@@ -17,12 +17,14 @@
 
 import Foundation
 
+/// Enum to represent different recipe categories
 enum Category: String, CaseIterable {
     case breakfast = "Breakfast"
     case lunch = "Lunch"
     case dinner = "Dinner"
     case dessert = "Dessert"
     
+    // Mapping of categories to their respective recipe models
     var categories: [RecipeModel] {
         switch self {
         case .breakfast:
@@ -37,29 +39,42 @@ enum Category: String, CaseIterable {
     }
 }
 
+// Data structure representing a recipe
 struct RecipeModel: Identifiable {
+    // Unique identifier for the recipe
     let id = UUID().uuidString
+    // Name of the recipe
     let name: String
+    // URL of the recipe's image
     let image: String
+    // Description of the recipe
     let description: String
+    // Ingredients list for the recipe
     let ingredients: String
+    // Cooking directions for the recipe
     let directions: String
+    // Category to which the recipe belongs
     let category: Category.RawValue
+    // Publication date of the recipe
     let datePublished: String
+    // URL to the full recipe details
     let url: String
     
 }
 
+// Sample data for the breakfast category
 var breakfastMeal: [RecipeModel] = [
     .init(name: "Test", image: "https://hips.hearstapps.com/hmg-prod/images/delish-202002-pozole-0392-landscape-pf-1582315071.jpg?crop=1xw:0.8441943127962085xh;center,top&resize=1200:*", description: "this is a test", ingredients: "testing", directions: "test", category: "Lunch", datePublished: "9/9/2023", url: "https://hips.hearstapps.com/hmg-prod/images/delish-202002-pozole-0392-landscape-pf-1582315071.jpg?crop=1xw:0.8441943127962085xh;center,top&resize=1200:*"),
     .init(name: "Test", image: "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/pantry-recipes-2.jpg", description: "this is a test", ingredients: "testing", directions: "test", category: "Lunch", datePublished: "9/9/2023", url: "test.com")
 ]
 
+// Sample data for the lunch category
 var lunchMeal: [RecipeModel] = [
     RecipeModel(name: "Test", image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=556,505", description: "this is a test", ingredients: "testing", directions: "test", category: "Lunch", datePublished: "9/9/2023", url: "test.com"),
     RecipeModel(name: "Test", image: "https://assets.bonappetit.com/photos/64e65c62101bebaac94dcf59/4:3/w_1600%2Ch_1200%2Cc_limit/20230822-SEO-ITS-2336.jpg", description: "this is a test", ingredients: "testing", directions: "test", category: "Lunch", datePublished: "9/9/2023", url: "test.com")
 ]
 
+// Sample data for the dinner category
 var dinnerMeal: [RecipeModel] =
 [
     RecipeModel(name: "Test", image: "https://www.deliciousmagazine.co.uk/wp-content/uploads/2023/06/2023D111_RUNNERBEANS_CHICKEN_1__-2.jpg", description: "this is a test", ingredients: "testing", directions: "test", category: "Lunch", datePublished: "9/9/2023", url: "test.com"),
@@ -68,6 +83,7 @@ var dinnerMeal: [RecipeModel] =
     RecipeModel(name: "Test", image: "https://www.feastingathome.com/wp-content/uploads/2021/10/best-fall-recipes.jpg", description: "this is a test", ingredients: "testing", directions: "test", category: "Lunch", datePublished: "9/9/2023", url: "test.com")
     ]
 
+// Sample data for the dessert category
 var dessertMeal: [RecipeModel] =
 [
     RecipeModel(name: "Test", image: "https://www.realsimple.com/thmb/2ixrIIlE-44L1MypGHIs2TqIQYk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-recipes-1672e2b4f9104ed3b3867a2a14889ce9.jpg", description: "this is a test", ingredients: "testing", directions: "test", category: "Lunch", datePublished: "9/9/2023", url: "test.com"),

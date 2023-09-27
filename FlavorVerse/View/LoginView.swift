@@ -16,16 +16,20 @@
 import SwiftUI
 
 struct LoginView: View {
+    // MARK: - Properties
+    
+    // State variables to store user input
     @State private var emailAddress = ""
     @State private var password = ""
     @State private var showWelcome = false
     @State private var showSignUp = false
     
+    // MARK: - Body
     var body: some View {
         ZStack {
             
             VStack(alignment: .center) {
-                
+                // Title and Sign Up button
                 HStack(spacing: 200) {
                     Text("Login")
                         .font(.title)
@@ -45,7 +49,7 @@ struct LoginView: View {
                     }
                     
                 }
-                
+                // Username input field
                 HStack {
                     Image(systemName: "person.circle")
                         .resizable()
@@ -55,7 +59,7 @@ struct LoginView: View {
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                 .padding(.horizontal)
-                
+                // Password input field
                 HStack {
                     Image(systemName: "lock")
                         .resizable()
@@ -65,7 +69,7 @@ struct LoginView: View {
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                 .padding(.horizontal)
-                
+                // Forgot Password button
                 Button {
                     
                 } label: {
@@ -74,7 +78,7 @@ struct LoginView: View {
                         .padding(.leading, 215.0)
                     
                 }
-                
+                // Login button
                 Button {
                     withAnimation {
                         showWelcome.toggle()

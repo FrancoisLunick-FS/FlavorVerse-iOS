@@ -17,14 +17,22 @@
 import SwiftUI
 
 struct RecipeCardView: View {
+    
+    // MARK: - Properties
+    
+    // Recipe model containing recipe details
     var recipeModel: RecipeModel
+    
+    // MARK: - Body
     var body: some View {
         VStack {
+            // AsyncImage to load and display the recipe image
             AsyncImage(url: URL(string: recipeModel.image)) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .overlay(alignment: .bottom) {
+                        // Recipe name displayed as a headline
                         Text(recipeModel.name)
                             .font(.headline)
                             .foregroundColor(.white)
@@ -33,6 +41,7 @@ struct RecipeCardView: View {
                             .padding()
                     }
             } placeholder: {
+                // Placeholder image in case the recipe image is not available
                 Image(systemName: "photo")
                     .resizable()
                     .scaledToFit()
@@ -40,6 +49,7 @@ struct RecipeCardView: View {
                     .foregroundColor(.white.opacity(0.7))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .overlay(alignment: .bottom) {
+                        // Recipe name displayed as a headline on the placeholder
                         Text(recipeModel.name)
                             .font(.headline)
                             .foregroundColor(.white)
@@ -57,6 +67,7 @@ struct RecipeCardView: View {
 
 struct RecipeCardView_Previews: PreviewProvider {
     static var previews: some View {
+        // Example usage of RecipeCardView with a sample RecipeModel
         RecipeCardView(recipeModel: RecipeModel.init(name: "", image: "", description: "", ingredients: "", directions: "", category: "Ca", datePublished: "", url: ""))
     }
 }

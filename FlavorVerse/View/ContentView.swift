@@ -19,15 +19,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - Properties
+    // Initialize the view model
     @StateObject var viewModel = ContentViewModel()
+    // Initialize the Registration view model
     @StateObject var registrationViewModel = RegistrationViewModel()
     
+    // MARK: - Body
     var body: some View {
         Group {
+            // Check if a user session exists
             if viewModel.userSession == nil {
+                // If no user session exists, display the LoginView
                 LoginView()
                     .environmentObject(registrationViewModel)
             } else {
+                // If a user session exists, display the MainView
                 MainView()
             }
         }

@@ -16,6 +16,7 @@
 import SwiftUI
 import FirebaseCore
 
+/// AppDelegate to configure Firebase
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -26,7 +27,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct FlavorVerseApp: App {
-    // register app delegate for Firebase setup
+    // Register the AppDelegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {

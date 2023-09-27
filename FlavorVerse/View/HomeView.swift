@@ -16,14 +16,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    // MARK: - Properties
+    
+    // State variables to track the selected and current recipe category
     @State private var selectedOption: Category = .breakfast
     @State private var currentCategory: Category = .breakfast
     
 //    @EnvironmentObject var viewModel: RegistrationViewModel
     
+    // MARK: - Body
     var body: some View {
         
         VStack {
+            // App title and search button
             HStack {
                 Text("Welcome to FlavorVerse")
                     .font(.title3)
@@ -34,7 +40,7 @@ struct HomeView: View {
                 Spacer()
                 
                 Button {
-                    
+                    // Handle search button action
                 } label: {
                     Image(systemName: "magnifyingglass")
                         .font(.title2)
@@ -49,11 +55,12 @@ struct HomeView: View {
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack {
                             ForEach(Category.allCases, id: \.self) { categoryItem in
-                                
+                                // Display sections of recipes based on selected category
                                 MealSection(category: categoryItem, currentCategory: $currentCategory)
                             }
                         }
                         .onChange(of: selectedOption, perform: { _ in
+                            // Scroll to the selected category
                             withAnimation {
                                 proxy.scrollTo(selectedOption, anchor: .topTrailing)
                             }

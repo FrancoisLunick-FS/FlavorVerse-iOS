@@ -16,9 +16,11 @@
 
 import SwiftUI
 
+/// Custom preference key to track and store offset values
 struct OffsetKey: PreferenceKey {
     static var defaultValue: CGRect = .zero
     
+    // Combine function to reduce multiple offset values into a single value
     static func reduce(value: inout CGRect, nextValue: () -> CGRect) {
         value = nextValue()
     }
