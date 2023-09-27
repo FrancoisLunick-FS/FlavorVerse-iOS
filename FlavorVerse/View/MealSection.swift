@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MealSection: View {
-    let options: Category
+    let category: Category
+    @Binding var currentCategory: Category
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
-            Text(options.rawValue)
+            Text(category.rawValue)
                 .font(.title.bold())
                 .padding(.vertical)
             
-            ForEach(options.categories) { mealItem in
+            ForEach(category.categories) { mealItem in
                 HStack(spacing: 16) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(mealItem.name)
@@ -51,11 +52,12 @@ struct MealSection: View {
                 
             }
         }
+        .modifier(OffsetModifier(category: category, currentCategory: $currentCategory))
     }
 }
 
-struct MealSection_Previews: PreviewProvider {
-    static var previews: some View {
-        MealSection(options: .breakfast)
-    }
-}
+//struct MealSection_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealSection(category: .breakfast)
+//    }
+//}
