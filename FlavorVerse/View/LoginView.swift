@@ -25,6 +25,9 @@ struct LoginView: View {
     @State private var password = ""
     @State private var showWelcome = false
     @State private var showSignUp = false
+    @State private var showHome = false
+    
+    @EnvironmentObject var viewModel: LoginViewModel
     
     // MARK: - Body
     var body: some View {
@@ -56,7 +59,7 @@ struct LoginView: View {
                     Image(systemName: "person.circle")
                         .resizable()
                         .frame(width: 24, height: 24)
-                    TextField("Username", text: $emailAddress)
+                    TextField("Username", text: $viewModel.email)
                 }
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
@@ -66,7 +69,7 @@ struct LoginView: View {
                     Image(systemName: "lock")
                         .resizable()
                         .frame(width: 24, height: 24)
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                 }
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
@@ -78,12 +81,12 @@ struct LoginView: View {
                     Text("Forgot Password?")
                         .foregroundColor(.gray)
                         .padding(.leading, 215.0)
-                    
                 }
                 // Login button
                 Button {
-                    withAnimation {
-                        showWelcome.toggle()
+                    
+                    Task {
+                        try await viewModel.loginUser()
                     }
                     
                 } label: {
@@ -95,13 +98,14 @@ struct LoginView: View {
                 .padding(.all)
                 .buttonStyle(.borderedProminent)
                 .tint(.red)
-                .sheet(isPresented: $showWelcome) {
-                    LoginView()
-                        .presentationDetents([.height(400), .large, .large])
-                    
-                    
+                .fullScreenCover(isPresented: $viewModel.isAuthenticated) {
+                    HomeView()
                 }
                 
+                // Error message display
+                Text(viewModel.errorMessage)
+                    .foregroundColor(.red)
+                    .padding(.top, 10) // Add some spacing from the login button
             }
         }
     }
