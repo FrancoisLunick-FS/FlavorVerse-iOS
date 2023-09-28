@@ -25,56 +25,50 @@ struct HomeView: View {
     @State private var selectedOption: Category = .breakfast
     @State private var currentCategory: Category = .breakfast
     
-    //    @EnvironmentObject var viewModel: RegistrationViewModel
+    @State private var searchTerm = ""
+    
+    var recipes: [RecipeModel] = []
+    
+    var filteredRecipes: [RecipeModel] {
+        guard !searchTerm.isEmpty else { return recipes}
+        return recipes.filter { $0.name.localizedCaseInsensitiveContains(searchTerm) }
+    }
     
     // MARK: - Body
     var body: some View {
-        
-        VStack {
-            // App title and search button
-            HStack {
-                Text("Welcome to FlavorVerse")
-                    .font(.title3)
-                    .multilineTextAlignment(.center)
-                    .bold()
-                    .foregroundColor(.black)
-                
-                Spacer()
-                
-                Button {
-                    // Handle search button action
-                } label: {
-                    Image(systemName: "magnifyingglass")
-                        .font(.title2)
-                }
-                
-            }
-            // Menu Options list
-            MenuBarOptionsView(selectedOption: $selectedOption, currentOption: $currentCategory)
-                .padding([.top, .horizontal])
-            NavigationView {
-                ScrollViewReader { proxy in
-                    ScrollView(.vertical, showsIndicators: false) {
-                        VStack {
-                            ForEach(Category.allCases, id: \.self) { categoryItem in
-                                // Display sections of recipes based on selected category
-                                MealSection(category: categoryItem, currentCategory: $currentCategory)
+        NavigationView {
+            VStack {
+                Text("")
+                    .searchable(text: $searchTerm, prompt: "Search for recipes")
+                // Menu Options list
+                MenuBarOptionsView(selectedOption: $selectedOption, currentOption: $currentCategory)
+                    .padding([.top, .horizontal])
+                NavigationView {
+                    ScrollViewReader { proxy in
+                        ScrollView(.vertical, showsIndicators: false) {
+                            VStack {
+                                ForEach(Category.allCases, id: \.self) { categoryItem in
+                                    // Display sections of recipes based on selected category
+                                    MealSection(category: categoryItem, currentCategory: $currentCategory)
+                                }
                             }
+                            .onChange(of: selectedOption, perform: { _ in
+                                // Scroll to the selected category
+                                withAnimation {
+                                    proxy.scrollTo(selectedOption, anchor: .topTrailing)
+                                }
+                            })
+                            .padding(.horizontal)
+                            
+                            //ForEach(Men)
                         }
-                        .onChange(of: selectedOption, perform: { _ in
-                            // Scroll to the selected category
-                            withAnimation {
-                                proxy.scrollTo(selectedOption, anchor: .topTrailing)
-                            }
-                        })
-                        .padding(.horizontal)
-                        
-                        //ForEach(Men)
+                        .coordinateSpace(name: "scroll")
                     }
-                    .coordinateSpace(name: "scroll")
                 }
             }
-            
+            .navigationTitle("Welcome to FlavorVerse")
+            .navigationBarTitleDisplayMode(.inline)
+            .lineLimit(nil)
         }
         
     }
