@@ -25,21 +25,24 @@ struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
     // Initialize the Registration view model
     @StateObject var registrationViewModel = RegistrationViewModel()
+    @StateObject var loginViewModel = LoginViewModel()
     
     // MARK: - Body
     var body: some View {
         Group {
             // Check if a user session exists
             if viewModel.userSession == nil {
-                // If no user session exists, display the LoginView
+                // If no user session exists, display the MainView
+                MainView()
+                    .environmentObject(registrationViewModel)
+                    .environmentObject(loginViewModel)
+            } else {
+                // If a user session exists, display the LoginView
                 LoginView()
                     .environmentObject(registrationViewModel)
-            } else {
-                // If a user session exists, display the MainView
-                MainView()
+                    .environmentObject(loginViewModel)
             }
         }
-        
     }
 }
 
