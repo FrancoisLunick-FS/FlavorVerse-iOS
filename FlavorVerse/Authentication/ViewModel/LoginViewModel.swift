@@ -22,7 +22,6 @@ enum LoginError: Error {
     case emptyCredentials
     case wrongPassword
     case networkError
-    // Add more error cases as needed
 }
 
 

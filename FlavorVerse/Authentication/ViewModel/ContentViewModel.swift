@@ -23,6 +23,8 @@ import Combine
 @MainActor
 class ContentViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     private let service = AuthService.shared
     private var cancellables = Set<AnyCancellable>()
     
@@ -31,6 +33,8 @@ class ContentViewModel: ObservableObject {
     init() {
         
     }
+    
+    // MARK: - Functions
     
     /// Sets up the user session monitoring.
     func setup() {

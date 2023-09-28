@@ -20,11 +20,13 @@ import Foundation
 
 enum RegistrationError: Error {
     case networkError
-    // Add more error cases as needed
 }
 
 
 class RegistrationViewModel: ObservableObject {
+    
+    // MARK: - Properties
+    
     @Published var email = ""
     @Published var password = ""
     @Published var username = ""
