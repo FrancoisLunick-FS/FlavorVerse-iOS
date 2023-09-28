@@ -20,9 +20,6 @@ import SwiftUI
 struct SignUpView: View {
     
     // MARK: - Properties
-    //    @State private var emailAddress = ""
-    //    @State private var username = ""
-    //    @State private var password = ""
     @State private var showWelcome = false
     @State private var showLogin = false
     @EnvironmentObject var viewModel: RegistrationViewModel
