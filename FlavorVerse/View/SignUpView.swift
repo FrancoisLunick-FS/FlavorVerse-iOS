@@ -91,30 +91,37 @@ struct SignUpView: View {
                 Text("By continuing you agree to our Terms and Conditions and Privacy")
                     .multilineTextAlignment(.center)
                     .foregroundColor(.gray)
+                VStack {
+                    // Create Account Button
+                    Button {
+                        
+                        Task {
+                            try await viewModel.createUser()
+                        }
+                        
+                        withAnimation {
+                            showWelcome.toggle()
+                        }
+                        
+                    } label: {
+                        Text("Create Account")
+                            .foregroundColor(.white)
+                            .font(.body)
+                            .frame(maxWidth: 200)
+                    }
+                    .padding(.all)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.red)
+                    .fullScreenCover(isPresented: $viewModel.isRegistered) {
+                        SignUpCompleteView()
+                    }
+                    
+                    // Error message display
+                    Text(viewModel.errorMessage)
+                        .foregroundColor(.red)
+                        .padding(.top, 10) // Add some spacing from the login button
+                }
                 
-                // Create Account Button
-                Button {
-                    
-                    Task {
-                        try await viewModel.createUser()
-                    }
-                    
-                    withAnimation {
-                        showWelcome.toggle()
-                    }
-                    
-                } label: {
-                    Text("Create Account")
-                        .foregroundColor(.white)
-                        .font(.body)
-                        .frame(maxWidth: 200)
-                }
-                .padding(.all)
-                .buttonStyle(.borderedProminent)
-                .tint(.red)
-                .fullScreenCover(isPresented: $showWelcome) {
-                    SignUpCompleteView()
-                }
                 
                 // Already have an account? Text and Login Button
                 HStack {
@@ -130,8 +137,7 @@ struct SignUpView: View {
                         Text("Login")
                             .foregroundColor(.red)
                     }
-                    
-                    .sheet(isPresented: $showLogin) {
+                    .fullScreenCover(isPresented: $showLogin) {
                         LoginView()
                     }
                 }
