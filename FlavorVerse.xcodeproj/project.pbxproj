@@ -29,6 +29,7 @@
 		4EEAA28A2AA143390056222C /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA2892AA143390056222C /* SignUpCompleteView.swift */; };
 		4EEAA28C2AA14B360056222C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA28B2AA14B360056222C /* HomeView.swift */; };
 		4EEAA2902AA179E50056222C /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAA28F2AA179E50056222C /* RecipeModel.swift */; };
+		4EFC36842AC521940056734D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC36832AC521940056734D /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		4EEAA2892AA143390056222C /* SignUpCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
 		4EEAA28B2AA14B360056222C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4EEAA28F2AA179E50056222C /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		4EFC36832AC521940056734D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,6 @@
 				4EEAA27C2AA124320056222C /* Authentication */,
 				4EEAA2782AA10E6C0056222C /* View */,
 				4EEAA24A2AA10C7A0056222C /* FlavorVerseApp.swift */,
-				4EEAA2842AA130300056222C /* ContentViewModel.swift */,
 				4EEAA28F2AA179E50056222C /* RecipeModel.swift */,
 				4E1292FF2AB55F2A007CD16E /* OffsetKey.swift */,
 				4E1293012AB55FE6007CD16E /* OffsetModifier.swift */,
@@ -199,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				4EEAA2872AA134450056222C /* RegistrationViewModel.swift */,
+				4EEAA2842AA130300056222C /* ContentViewModel.swift */,
+				4EFC36832AC521940056734D /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				4E1292FA2AA7A40C007CD16E /* MenuBarOptionsView.swift in Sources */,
 				4EEAA2832AA12E810056222C /* MainView.swift in Sources */,
 				4EEAA2752AA10D1B0056222C /* LoginView.swift in Sources */,
+				4EFC36842AC521940056734D /* LoginViewModel.swift in Sources */,
 				4E1293022AB55FE6007CD16E /* OffsetModifier.swift in Sources */,
 				4EEAA28C2AA14B360056222C /* HomeView.swift in Sources */,
 				4EEAA2902AA179E50056222C /* RecipeModel.swift in Sources */,
