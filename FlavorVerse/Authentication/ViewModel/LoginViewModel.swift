@@ -18,6 +18,7 @@
 
 import Foundation
 
+// Enum to represent various login-related errors
 enum LoginError: Error {
     case emptyCredentials
     case wrongPassword
@@ -29,6 +30,7 @@ class LoginViewModel: ObservableObject {
     
     // MARK: - Properties
     
+    // Published properties for email, password, username, and authentication status
     @Published var email = ""
     @Published var password = ""
     @Published var username = ""
@@ -67,13 +69,16 @@ class LoginViewModel: ObservableObject {
             // Handle login error here
             switch error {
             case LoginError.wrongPassword:
+                // Set an error message for wrong password
                 errorMessage = "Invalid email or password. Please check your credentials and try again."
             case LoginError.networkError:
+                // Set an error message for network error
                 errorMessage = "Network error. Please check your internet connection and try again."
             default:
+                // Set a generic error message for other login failures
                 errorMessage = "Failed to log in. Please try again later."
             }
-            // Handle login error here (e.g., display an error message)
+            // Set isAuthenticated to false on login failure
             DispatchQueue.main.async {
                 self.isAuthenticated = false
             }

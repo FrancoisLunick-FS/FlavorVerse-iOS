@@ -105,7 +105,7 @@ struct LoginView: View {
                 // Error message display
                 Text(viewModel.errorMessage)
                     .foregroundColor(.red)
-                    .padding(.top, 10) // Add some spacing from the login button
+                    .padding(.top, 10)
             }
         }
     }
