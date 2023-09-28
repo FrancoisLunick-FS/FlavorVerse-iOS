@@ -41,10 +41,14 @@ struct MealSection: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(mealItem.name)
                             .font(.title3.bold())
+                            .lineLimit(nil)
+                            .truncationMode(.tail)
                         
                         Text(mealItem.description)
                             .font(.caption)
                             .foregroundColor(.gray)
+                            .lineLimit(4)
+                            .truncationMode(.tail)
                     }
                     
                     Spacer()
@@ -57,6 +61,9 @@ struct MealSection: View {
                             .frame(width: 96, height: 88)
                             .clipped()
                             .cornerRadius(10)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color(.gray).opacity(0.3), Color(.gray)]), startPoint: .top, endPoint: .bottom))
+                            .clipShape(RoundedRectangle(cornerRadius: 20.0))
+                            .shadow(color: Color(.black).opacity(0.3), radius: 15, x: 0, y: 10)
                     } placeholder: {
                         Image(systemName: "photo")
                             .resizable()
