@@ -17,6 +17,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 enum RegistrationError: Error {
     case networkError
@@ -47,6 +48,7 @@ class RegistrationViewModel: ObservableObject {
         
         // Check if email and password are not empty
         guard !username.isEmpty, !email.isEmpty, !password.isEmpty else {
+            // Set error message for invalid credentials
             DispatchQueue.main.async {
                 self.errorMessage = "Please enter both email and password."
             }
@@ -57,11 +59,15 @@ class RegistrationViewModel: ObservableObject {
             
             isRegistered = true
         } catch {
-            switch error {
-            case RegistrationError.networkError:
-                errorMessage = "Network error. Please check your internet connection and try again."
-            default:
-                errorMessage = "Failed to log in. Please try again later."
+            if let errorCode = error as NSError? {
+                switch errorCode.code {
+                case AuthErrorCode.emailAlreadyInUse.rawValue:
+                    errorMessage = "Email already in use. Please login or try a different email"
+                case AuthErrorCode.networkError.rawValue:
+                    errorMessage = "Network error. Please check your internet connection and try again."
+                default:
+                    errorMessage = "Failed to sign up. Please try again later."
+                }
             }
             
             isRegistered = false
