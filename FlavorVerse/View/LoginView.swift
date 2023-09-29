@@ -26,6 +26,7 @@ struct LoginView: View {
     @State private var showWelcome = false
     @State private var showSignUp = false
     @State private var showHome = false
+    @State private var showForgotPassword = false
     
     @EnvironmentObject var viewModel: LoginViewModel
     
@@ -54,12 +55,12 @@ struct LoginView: View {
                     }
                     
                 }
-                // Username input field
+                // Email input field
                 HStack {
                     Image(systemName: "person.circle")
                         .resizable()
                         .frame(width: 24, height: 24)
-                    TextField("Username", text: $viewModel.email)
+                    TextField("Email", text: $viewModel.email)
                 }
                 .padding(20)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
@@ -76,11 +77,18 @@ struct LoginView: View {
                 .padding(.horizontal)
                 // Forgot Password button
                 Button {
-                    
+                    withAnimation {
+                        showForgotPassword.toggle()
+                    }
                 } label: {
                     Text("Forgot Password?")
                         .foregroundColor(.gray)
                         .padding(.leading, 215.0)
+                }
+                .sheet(isPresented: $showForgotPassword) {
+                    ForgotPasswordView()
+                        .presentationDetents([.height(400), .large, .large])
+                        .presentationDragIndicator(.hidden)
                 }
                 // Login button
                 Button {
