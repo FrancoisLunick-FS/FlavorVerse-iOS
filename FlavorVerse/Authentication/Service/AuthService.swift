@@ -44,7 +44,7 @@ class AuthService {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
         } catch {
-            print("DEBUG: Failed to register user with error: \(error.localizedDescription)")
+            print("DEBUG: Failed to login user with error: \(error.localizedDescription)")
         }
     }
     
@@ -59,14 +59,33 @@ class AuthService {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
         } catch {
-            print("DEBUG: Failed to login user with error: \(error.localizedDescription)")
+            print("DEBUG: Failed to register user with error: \(error.localizedDescription)")
         }
     }
-    
     
     /// Signs the user out
     func signOut() {
         try? Auth.auth().signOut()
         self.userSession = nil
     }
+    
+    /// Function to check if a user with a specific email exists
+    /// - Parameter email: user's email
+    /// - Returns: If email exists within firebase
+        func isUserExists(withEmail email: String) -> Bool {
+            var isUserExists = false
+
+            // Use Firebase Authentication to check if the user exists
+            Auth.auth().fetchSignInMethods(forEmail: email) { (methods, error) in
+                if let error = error {
+                    // An error occurred while fetching sign-in methods
+                    print("Error fetching sign-in methods: \(error.localizedDescription)")
+                } else if let methods = methods {
+                    // User exists if there are sign-in methods associated with the email
+                    isUserExists = !methods.isEmpty
+                }
+            }
+
+            return isUserExists
+        }
 }
