@@ -30,9 +30,12 @@ struct MainView: View {
     var body: some View {
         ZStack {
             // Background image
-            Image("loginbackground")
-                .resizable()
-                .ignoresSafeArea()
+            GeometryReader { geo in
+                Image("loginbackground")
+                    .resizable()
+                    .frame(width: geo.size.width, height: geo.size.height)
+            }
+            .ignoresSafeArea()
             
             VStack {
                 // Welcome title
@@ -82,7 +85,6 @@ struct MainView: View {
                 .sheet(isPresented: $showSignUp) {
                     SignUpView()
                 }
-                
             }
         }.zIndex(1)
     }
